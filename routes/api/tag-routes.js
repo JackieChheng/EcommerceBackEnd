@@ -20,7 +20,7 @@ router.get('/:id', async(req, res) => {
       include:Product,
     });
     if(!userTags){
-      res.status(404).json({message:   'No tag found with this tag!'});
+      res.status(404).json({message:   'No tag found with this id!'});
     }
     req.status(200).json(userTags);
   }catch(err){
